@@ -1,0 +1,67 @@
+﻿try
+            {
+
+
+
+                string responseString = String.Empty;
+
+                var baseAddress = new Uri("https://www.facebook.com/login.php?login_attempt=1&lwv=110");
+                var cookieContainer = new CookieContainer();
+                using (var handler = new HttpClientHandler()
+                {
+                    CookieContainer = cookieContainer,
+                    UseCookies = true,
+                    AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
+                })
+
+                using (var client = new HttpClient(handler))
+                {
+                    
+                    client.BaseAddress = baseAddress;
+                    //cookieContainer.Add(baseAddress, new Cookie("datr", "80ZzUfKqDOjwL8pauwqMjHTa"));
+                    cookieContainer.Add(baseAddress, new Cookie("datr", "YsWYWLi4TaWwnqXsiTIo0Ozg"));
+                    cookieContainer.Add(baseAddress, new Cookie("dats", "1"));
+                    cookieContainer.Add(baseAddress, new Cookie("sb", "asWYWJ-ypmwrSMYNCtkqjE6Z"));
+                    cookieContainer.Add(baseAddress, new Cookie("lu", "gA_czwPOq8sgaIbO5bkoLO1w"));
+                    cookieContainer.Add(baseAddress, new Cookie("fr", "asWYWJ-0WLoGNlRT2CRLbSlE.AWVB_lw0KQ5IYJw-i9AzQg4l1Ec.BYbV0Y._d.Fjv.0.0.BY9h2m.AWUqJZM8"));
+                    cookieContainer.Add(baseAddress, new Cookie("_js_reg_fb_ref", "https%3A%2F%2Fwww.facebook.com%2F%3Fstype%3Dlo%26jlou%3DAffxURdDIqjxXdKodccl8ijBCT8QtS5qvyZBPeUrDKHy2bb0VIHz4Y1kXZ7q1aoeOaNKcf8uZZajQ-AlkzxfElpySBtlM-UnN0Q2ML9FyMtJcg%26smuh%3D31388%26lh%3DAc_t8Xu6_dbp4so7"));
+                    cookieContainer.Add(baseAddress, new Cookie("_js_reg_fb_gate", "https%3A%2F%2Fwww.facebook.com%2F%3Fstype%3Dlo%26jlou%3DAffxURdDIqjxXdKodccl8ijBCT8QtS5qvyZBPeUrDKHy2bb0VIHz4Y1kXZ7q1aoeOaNKcf8uZZajQ-AlkzxfElpySBtlM-UnN0Q2ML9FyMtJcg%26smuh%3D31388%26lh%3DAc_t8Xu6_dbp4so7"));
+                    cookieContainer.Add(baseAddress, new Cookie("wd", "1366x638"));
+
+
+                    addHeadersFacebookByClient(client);
+
+                    var values = new Dictionary<string, string>
+                    {
+                        { "lsd", "AVqddp5U" },
+                        { "email", user },
+                        { "pass", senha },
+                        { "timezone", "180" },
+                        { "lgndim", "eyJ3IjoxMzY2LCJoIjo3NjgsImF3IjoxMzY2LCJhaCI6NzI4LCJjIjoyNH0%3D" },
+                        { "lgnrnd", "070734_EnYO" },
+                        { "lgnjs", "1492524456" },
+                        { "ab_test_data", "AAA%2FqffVKAVVAAAAAAAAAAAAAAAAAAAAKAAAAAAAS%2FbEAAAAAAMAAB" },
+                        { "locale", "pt_BR" },
+                        { "next", "https%3A%2F%2Fwww.facebook.com%2F%3Fstype%3Dlo%26jlou%3DAffxURdDIqjxXdKodccl8ijBCT8QtS5qvyZBPeUrDKHy2bb0VIHz4Y1kXZ7q1aoeOaNKcf8uZZajQ-AlkzxfElpySBtlM-UnN0Q2ML9FyMtJcg%26smuh%3D31388%26lh%3DAc_t8Xu6_dbp4so7" },
+                        { "login_source", "login_bluebar" }
+
+                    };
+                    var content = new FormUrlEncodedContent(values);
+
+                    //content.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+
+                    var response = client.PostAsync("", content).Result;
+
+                    var a = response.Headers.Location;
+
+                    string result = String.Empty;
+
+                    responseString = response.Content.ReadAsStringAsync().Result;
+
+                    responseString = Regex.Replace(responseString, @"[^^A-Za-z0-9\-_.!~*'()]", "");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
