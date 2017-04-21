@@ -3,6 +3,7 @@ using FBBF;
 using System.Collections.Generic;
 using System.Threading;
 using System.Collections.Concurrent;
+using System.Text;
 
 namespace FBBFExecution
 {
@@ -94,77 +95,77 @@ namespace FBBFExecution
                                 foreach (Char f in ValidChars)
                                     foreach (Char g in ValidChars)
                                     {
-                                        API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g);
+                                        TryEnqueue(a.ToString() + b + c + d + e + f + g);
                                         foreach (Char h in ValidChars)
                                         {
-                                            API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h);
+                                            TryEnqueue(a.ToString() + b + c + d + e + f + g + h);
                                             foreach (Char i in ValidChars)
                                             {
-                                                API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i);
+                                                TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i);
                                                 foreach (Char j in ValidChars)
                                                 {
-                                                    API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j);
+                                                    TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j);
                                                     foreach (Char k in ValidChars)
                                                     {
-                                                        API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k);
+                                                        TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k);
                                                         foreach (Char l in ValidChars)
                                                         {
-                                                            API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l);
+                                                            TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l);
                                                             foreach (Char m in ValidChars)
                                                             {
-                                                                API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m);
+                                                                TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m);
                                                                 foreach (Char n in ValidChars)
                                                                 {
-                                                                    API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n);
+                                                                    TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n);
                                                                     foreach (Char o in ValidChars)
                                                                     {
-                                                                        API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o);
+                                                                        TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o);
                                                                         foreach (Char p in ValidChars)
                                                                         {
-                                                                            API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p);
+                                                                            TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p);
                                                                             foreach (Char q in ValidChars)
                                                                             {
-                                                                                API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q);
+                                                                                TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q);
                                                                                 foreach (Char r in ValidChars)
                                                                                 {
-                                                                                    API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r);
+                                                                                    TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r);
                                                                                     ;
                                                                                     foreach (Char s in ValidChars)
                                                                                     {
-                                                                                        API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s);
+                                                                                        TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s);
                                                                                         foreach (Char t in ValidChars)
                                                                                         {
-                                                                                            API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t);
+                                                                                            TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t);
                                                                                             foreach (Char u in ValidChars)
                                                                                             {
-                                                                                                API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u);
+                                                                                                TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u);
                                                                                                 foreach (Char v in ValidChars)
                                                                                                 {
-                                                                                                    API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v);
+                                                                                                    TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v);
                                                                                                     foreach (Char x in ValidChars)
                                                                                                     {
-                                                                                                        API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x);
+                                                                                                        TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x);
                                                                                                         foreach (Char z in ValidChars)
                                                                                                         {
-                                                                                                            API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z);
+                                                                                                            TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z);
                                                                                                             foreach (Char a1 in ValidChars)
                                                                                                             {
-                                                                                                                API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1);
+                                                                                                                TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1);
                                                                                                                 foreach (Char b1 in ValidChars)
                                                                                                                 {
-                                                                                                                    API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1 + b1);
+                                                                                                                    TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1 + b1);
                                                                                                                     foreach (Char c1 in ValidChars)
                                                                                                                     {
-                                                                                                                        API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1 + b1 + c1);
+                                                                                                                        TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1 + b1 + c1);
                                                                                                                         foreach (Char d1 in ValidChars)
                                                                                                                         {
-                                                                                                                            API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1 + b1 + c1 + d1);
+                                                                                                                            TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1 + b1 + c1 + d1);
                                                                                                                             foreach (Char e1 in ValidChars)
                                                                                                                             {
-                                                                                                                                API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1 + b1 + c1 + d1 + e1);
+                                                                                                                                TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1 + b1 + c1 + d1 + e1);
                                                                                                                                 foreach (Char f1 in ValidChars)
                                                                                                                                 {
-                                                                                                                                    API.FilaPrincipal.Enqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1 + b1 + c1 + d1 + e1 + f1);
+                                                                                                                                    TryEnqueue(a.ToString() + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + x + z + a1 + b1 + c1 + d1 + e1 + f1);
                                                                                                                                 }
                                                                                                                             }
                                                                                                                         }
@@ -190,6 +191,20 @@ namespace FBBFExecution
                                         }
                                     }
             #endregion
+        }
+
+        private static bool TryEnqueue(string aInserir)
+        {
+            bool inseriu = false;
+            do
+            {
+                if (GC.GetTotalMemory(true) <= Encoding.UTF8.GetBytes(aInserir).Length)
+                {
+                    API.FilaPrincipal.Enqueue(aInserir);
+                    inseriu = true;
+                }
+            } while (!inseriu);
+            return true;
         }
 
         #endregion
