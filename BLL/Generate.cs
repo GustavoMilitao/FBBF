@@ -197,7 +197,7 @@ namespace BLL
             bool inseriu = false;
             do
             {
-                if (GC.GetTotalMemory(true) <= Encoding.UTF8.GetBytes(aInserir).Length)
+                if (GC.GetTotalMemory(true) >= Encoding.UTF8.GetBytes(aInserir).Length)
                 {
                     API.FilaPrincipal.Enqueue(aInserir);
                     inseriu = true;
