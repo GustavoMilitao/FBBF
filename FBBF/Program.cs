@@ -10,6 +10,11 @@ namespace FBBF
     {
         static void Main(string[] args)
         {
+            FBBFExecution.Execution.Start();
+            //API.FilaPrincipal = new Queue<string>();
+            //API.FilaPrincipal.Enqueue("notrightnotdownrightdown");
+            //API.User = "gustavo.henrique.3382118";
+            //API.StartFBBF();
         }
     }
 }

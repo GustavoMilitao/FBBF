@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBBF", "FBBF\FBBF.csproj", "{6C4B13F2-F507-49AE-9351-B4A01ECE41F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBBF Test", "UnitTestProject1\FBBF Test.csproj", "{D64DEF89-7FEE-4E31-BFA9-C80EA76F49EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBBF Execution", "UnitTestProject1\FBBF Execution.csproj", "{D64DEF89-7FEE-4E31-BFA9-C80EA76F49EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
