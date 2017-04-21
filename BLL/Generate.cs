@@ -1,13 +1,12 @@
 ﻿using System;
-using FBBF;
 using System.Collections.Generic;
-using System.Threading;
 using System.Collections.Concurrent;
 using System.Text;
+using System.Threading;
 
-namespace FBBFExecution
+namespace BLL
 {
-    public class Execution
+    public class Generate
     {
         #region properties
 
