@@ -91,7 +91,7 @@ namespace BLL
 
                     var response = await client.PostAsync("/login.php", content);
 
-                    string responseString = response.Content.ReadAsStringAsync().Result;
+                    string responseString = await response.Content.ReadAsStringAsync();
 
                     if (!responseString.Contains("A senha inserida") && 
                         !responseString.Contains("Tente novamente mais tarde")
@@ -101,6 +101,9 @@ namespace BLL
                         sw.WriteLine(user);
                         sw.WriteLine(senha);
                         sw.Close();
+                        Console.WriteLine("pass is : " + senha);
+                        Console.ReadKey();
+                        Environment.Exit(0);
                         return true;
                     }
                 }
